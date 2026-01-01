@@ -1,15 +1,15 @@
 ---
 layout: archive
-title: "Welcome"
+title: "欢迎"
 permalink: /
 author_profile: true
 ---
 
-Hi there! I'm **Ruogu Yang**.
+大家好！我是**杨若谷**。
 
-Welcome to my personal website. This is where I share my thoughts, projects, and ideas.
+欢迎来到我的个人网站。在这里我会分享我的想法、项目和见解。
 
-## Recent Posts
+## 最新文章
 
 {% assign posts = site.posts | sort: "date" | reverse %}
 {% for post in posts limit: 5 %}

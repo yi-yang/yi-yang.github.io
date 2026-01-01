@@ -1,21 +1,21 @@
 ---
 layout: single
-title: "About Me"
+title: "关于我"
 permalink: /about/
 author_profile: true
 ---
 
-## About Me
+## 关于我
 
-Hi, I'm Ruogu Yang!
+你好，我是杨若谷！
 
-Welcome to my personal website. I'm passionate about technology and always eager to learn new things.
+欢迎来到我的个人网站。我对技术充满热情，总是渴望学习新事物。
 
-### Interests
+### 兴趣爱好
 
-- Web Development
-- Open Source
-- Technology
-- Continuous Learning
+- Web 开发
+- 开源项目
+- 技术探索
+- 持续学习
 
-Feel free to reach out to me at [ruogu.yang@126.com](mailto:ruogu.yang@126.com)
+欢迎通过邮件与我联系：[ruogu.yang@126.com](mailto:ruogu.yang@126.com)

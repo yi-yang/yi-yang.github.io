@@ -1,15 +1,18 @@
 # Minimal Mistakes configuration
 
 # Site Settings
-locale: "en-US"
-title: "Ruogu Yang"
+locale: "zh-CN"
+title: "杨若谷的个人网站"
 title_separator: "-"
-name: "Ruogu Yang"
-description: "Personal website of Ruogu Yang"
+name: "杨若谷"
+description: "欢迎来到我的个人网站"
 url: "https://yangruogu.com"
 baseurl: ""
 repository: "yi-yang/yi-yang.github.io"
 teaser: ""
+
+# Minimal Mistakes Theme Settings
+minimal_mistakes_skin: "mint"  # 有活力的薄荷绿主题
 
 # Build settings
 markdown: kramdown
@@ -25,10 +28,10 @@ twitter:
 
 # Site Author
 author:
-  name: "Ruogu Yang"
+  name: "杨若谷"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "Welcome to my personal website"
-  location: "China"
+  bio: "热爱技术，持续学习"
+  location: "中国"
   email: "ruogu.yang@126.com"
   links:
     - label: "Email"
@@ -41,7 +44,7 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Email"
+    - label: "邮箱"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:ruogu.yang@126.com"
 
