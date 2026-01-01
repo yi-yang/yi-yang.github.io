@@ -50,12 +50,13 @@ footer:
 
 # Navigation
 navigation:
-  - title: "首页"
-    url: /
-  - title: "关于我"
-    url: /about/
-  - title: "文章"
-    url: /posts/
+  main:
+    - title: "首页"
+      url: /
+    - title: "关于我"
+      url: /about/
+    - title: "文章"
+      url: /posts/
 
 # Plugins
 plugins:
