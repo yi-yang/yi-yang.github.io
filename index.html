@@ -1,0 +1,172 @@
+---
+layout: null
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨若谷 - 个人博客</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+SC:wght@400;700;900&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/slamdunk.css' | relative_url }}">
+</head>
+<body>
+    <!-- Speed Lines Background -->
+    <div class="speed-lines"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="brand-text">YRG</span>
+        </div>
+        <div class="nav-menu">
+            <a href="#about" class="nav-link">关于</a>
+            <a href="#posts" class="nav-link">文章</a>
+            <a href="mailto:ruogu.yang@126.com" class="nav-link">联系</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-text">NO.10</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">ARE YOU</span>
+                <span class="title-line title-main">READY?</span>
+            </h1>
+            <p class="hero-subtitle">杨若谷的个人博客 - 技术 · 热情 · 不断进取</p>
+            <div class="hero-actions">
+                <a href="#posts" class="btn btn-primary">
+                    <span>探索文章</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </a>
+                <a href="#about" class="btn btn-secondary">关于我</a>
+            </div>
+        </div>
+        <div class="basketball-decoration">
+            <svg class="basketball basketball-1" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="3"/>
+                <path d="M50 5 Q50 50 50 95" fill="none" stroke="currentColor" stroke-width="3"/>
+                <path d="M5 50 Q50 50 95 50" fill="none" stroke="currentColor" stroke-width="3"/>
+                <path d="M15 15 Q50 50 85 15" fill="none" stroke="currentColor" stroke-width="3"/>
+                <path d="M15 85 Q50 50 85 85" fill="none" stroke="currentColor" stroke-width="3"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-deco">
+                        <svg class="basketball-icon" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <path d="M50 5 Q50 50 50 95" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <path d="M5 50 Q50 50 95 50" fill="none" stroke="currentColor" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <h2 class="section-title">
+                        <span class="title-number">01</span>
+                        关于我
+                    </h2>
+                    <p class="about-text">
+                        大家好！我是<strong>杨若谷</strong>，一个热爱技术的开发者。
+                        就像湘北篮球队一样，我保持着对学习和成长的热忱。
+                        在这个博客里，我会分享我的技术见解、项目经验和思考。
+                    </p>
+                    <div class="skills">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Web开发</span>
+                        <span class="skill-tag">持续学习</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Posts Section -->
+    <section id="posts" class="posts">
+        <div class="container">
+            <h2 class="section-title section-title-large">
+                <span class="title-number">02</span>
+                最新文章
+            </h2>
+            <div class="posts-grid">
+                {% assign posts = site.posts | sort: "date" | reverse %}
+                {% for post in posts limit: 6 %}
+                <article class="post-card">
+                    <div class="post-number">
+                        <span class="post-num">{{ forloop.index | prepend: '00' | slice: -2, 2 }}</span>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <time class="post-date">{{ post.date | date: "%Y.%m.%d" }}</time>
+                        </div>
+                        <h3 class="post-title">
+                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                        </h3>
+                        <p class="post-excerpt">
+                            {% if post.excerpt %}
+                                {{ post.excerpt | strip_html | truncatewords: 30 }}
+                            {% else %}
+                                点击查看文章内容...
+                            {% endif %}
+                        </p>
+                        <a href="{{ post.url | relative_url }}" class="post-link">
+                            阅读更多
+                            <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">YRG</span>
+                    <p class="footer-text">热爱技术，持续学习</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:ruogu.yang@126.com" class="footer-link">
+                        <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        Email
+                    </a>
+                    <a href="https://yangruogu.com" class="footer-link">
+                        <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        Website
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 杨若谷. 用热情创造.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ '/assets/js/slamdunk.js' | relative_url }}"></script>
+</body>
+</html>
